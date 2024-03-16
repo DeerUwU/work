@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Portfolio</title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="../assets/deer_sillhouette_256x.png"
+        />
+
+        <meta
+            property="og:image"
+            content="../assets/deer_sillhouette_256x.png"
+        />
+        <meta property="og:image:alt" content="deer logo" />
+        <meta property="og:image:width" content="256" />
+        <meta property="og:image:height" content="256" />
+        <meta property="og:title" content="Design Portfolio" />
+        <meta
+            property="og:description"
+            content="Hi, thanks for checking out my stuff."
+        />
+        <meta property="og:url" content="index.html" />
+        <meta property="og:type" content="website" />
+
+        <link rel="stylesheet" href="../css/fullpage.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+
+        <script src="../js/jquery-3.6.1.min.js"></script>
+    </head>
+
+    <body>
+        <div class="loader"></div>
+        <header class="navbar">
+            <img id="navbar-icon" src="../assets/logo_white_256x.png" />
+            <!-- <a href="index.html" id="navbar-url">cakeeh.art</a> -->
+
+            <div id="navbar-links">
+                <a class="navbar-link" href="#home">Home</a>
+                <a class="navbar-link" href="#projects">Projects</a>
+                <a class="navbar-link" href="#about">About Me</a>
+                <a class="navbar-link" href="index.html">Gallery</a>
+            </div>
+
+            <div id="lang-wrap">
+                <a href="#" lang="en" id="lang-en" class="lang-active">EN</a>
+                <a href="#" lang="de" id="lang-de">DE</a>
+            </div>
+        </header>
+
+        <!-- --------------------------------------------------------- -->
+        <main data-barba="wrapper">
+            <!-- fullpage.js container -->
+            <div id="fullpage">
+                <!-- ----------------------- page landing --------------------------- -->
+                <section class="section" id="page-home">
+                    <!-- <div style="height: 80px"></div> -->
+
+                    <div id="att-block-container">
+                        <div id="att-block-main">
+                            <div id="att-block-main-left-side">
+                                <h1 class="text-gr-green" id="txt-h1-idea">
+                                    It all starts with an idea.
+                                </h1>
+                                <button
+                                    type="button"
+                                    class="button-gr-green"
+                                    id="txt-about-me"
+                                    onclick="window.location.href='#about'">
+                                    About Me
+                                </button>
+                            </div>
+                            <img src="../assets/logo_white_sketchup.png" />
+                        </div>
+                    </div>
+
+                    <!-- skill cards -->
+                    <div id="block-skills-container">
+                        <div id="card1">
+                            <h2 id="card1-title">Design</h2>
+                            <img
+                                id="card1-icon"
+                                src="../assets/icons/measure.svg"
+                            />
+                        </div>
+
+                        <div id="card2">
+                            <h2 id="card2-title">3D</h2>
+                            <img
+                                id="card2-icon"
+                                src="../assets/icons/cube.svg"
+                            />
+                        </div>
+
+                        <div id="card3">
+                            <h2 id="card3-title">Pixel Art</h2>
+                            <img
+                                id="card3-icon"
+                                src="../assets/icons/pixels grid.svg"
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ----------------------- page projects --------------------------- -->
+                <div class="section" id="page-projects">
+                    <h1 class="page-header">Projects</h1>
+                    <div id="block-projects-container">
+                        <div id="projects-1">
+                            <img src="../assets/projects/design/thumb.png" />
+                            <h3 class="text-gr-green">Designs</h3>
+                        </div>
+
+                        <div id="projects-2">
+                            <img src="../assets/projects/3d/thumb.jpg" />
+                            <h3 class="text-gr-green">3D Projects</h3>
+                        </div>
+
+                        <div id="projects-3">
+                            <img src="../assets/projects/pixel/thumb.jpg" />
+                            <h3 class="text-gr-green">Nature Pixelart</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ----------------------- page aboutme --------------------------- -->
+                <section class="section" id="page-aboutme">
+                    <div id="att-about-me">
+                        <h2 class="page-header header-aboutme text-gr-green">About Me</h2>
+                        <p>
+                            Hi. I'm a passionate 2D/3D artist and
+                            aspiring graphic designer from Germany. I'm well-versed
+                            in a variety of creative applications. Thank you for
+                            checking out my work!
+                        </p>
+                    </div>
+
+                    <h2 class="page-header header-aboutme">Skills</h2>
+
+
+                    <div id="skills-container">
+
+                        <!-- left list -->
+                        <ul class="skills-list">
+
+                            <!-- photoshop -->
+                            <li class="skills-list-item">
+                                <img src="../assets/icons/Adobe Photoshop CC.svg">
+
+                                <div class="skills-textandbar">
+                                    <div class="skills-item-name">
+                                        <p>Photoshop</p>
+                                        <p>(5 years)</p>     
+                                    </div>
+                                    <div class="skills-bar p80"></div>
+                                </div>
+                            </li>
+
+                            <!-- illustrator -->
+                            <li class="skills-list-item">
+                                <img src="../assets/icons/Adobe Illustrator CC.svg">
+
+                                <div class="skills-textandbar">
+                                    <div class="skills-item-name">
+                                        <p>Illustrator</p>
+                                        <p>(3 years)</p>     
+                                    </div>
+                                    <div class="skills-bar p70"></div>
+                                </div>
+                            </li>
+
+                            <!-- premiere -->
+                            <li class="skills-list-item">
+                                <img src="../assets/icons/Adobe Premiere 2020.svg">
+
+                                <div class="skills-textandbar">
+                                    <div class="skills-item-name">
+                                        <p>Premiere</p>
+                                        <p>(3 years)</p>     
+                                    </div>
+                                    <div class="skills-bar p70"></div>
+                                </div>
+                            </li>
+
+                            <!-- indesign -->
+                            <li class="skills-list-item">
+                                <img src="../assets/icons/Adobe Indesign CC.svg">
+
+                                <div class="skills-textandbar">
+                                    <div class="skills-item-name">
+                                        <p>Indesign</p>
+                                        <p>(2 years)</p>     
+                                    </div>
+                                    <div class="skills-bar p50"></div>
+                                </div>
+                            </li>
+
+
+                        </ul>
+
+
+                        <!-- right list -->
+                        <ul class="skills-list">
+
+                            <!-- photoshop -->
+                            <li class="skills-list-item">
+                                <img src="../assets/icons/blender.svg">
+
+                                <div class="skills-textandbar">
+                                    <div class="skills-item-name">
+                                        <p>Blender</p>
+                                        <p>(6 years)</p>     
+                                    </div>
+                                    <div class="skills-bar p90"></div>
+                                </div>
+                            </li>
+
+                            <!-- illustrator -->
+                            <li class="skills-list-item">
+                                <img src="../assets/icons/html.svg">
+
+                                <div class="skills-textandbar">
+                                    <div class="skills-item-name">
+                                        <p>HTML/CSS</p>
+                                        <p>(2 years)</p>     
+                                    </div>
+                                    <div class="skills-bar p70"></div>
+                                </div>
+                            </li>
+
+                            <!-- premiere -->
+                            <li class="skills-list-item">
+                                <img src="../assets/icons/figma.png">
+
+                                <div class="skills-textandbar">
+                                    <div class="skills-item-name">
+                                        <p>Figma</p>
+                                        <p>(1 year)</p>     
+                                    </div>
+                                    <div class="skills-bar p60"></div>
+                                </div>
+                            </li>
+
+                            <!-- indesign -->
+                            <li class="skills-list-item">
+                                <img src="../assets/icons/js.svg">
+
+                                <div class="skills-textandbar">
+                                    <div class="skills-item-name">
+                                        <p>Javascript</p>
+                                        <p>(6 months)</p>     
+                                    </div>
+                                    <div class="skills-bar p30"></div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div id="att-email">
+                        <h2 class="page-header header-aboutme text-gr-green">Want to get in touch?</h2>
+                        
+                        <div class="arrow-and-email-container">
+                            <span class="material-symbols-rounded" id="arrow-email">east</span>
+                            <a class="aboutme-email" href="mailto:contact@cakeeh.art">contact@cakeeh.art</a>
+                        </div>
+                        
+                    </div>
+                    <!-- --------------- -->
+                </section>
+            </div>
+            
+        </main>
+        <!-- 
+        <div id="page-next-container">
+            <div id="button-page-projects" class="button-next" href="#projects">
+                <h3>Projects</h3>
+                <span class="material-symbols-rounded">south</span>
+            </div>
+
+            <div id="button-page-aboutme" class="button-next"  href="#aboutme">
+                <h3>About Me</h3>
+                <span class="material-symbols-rounded">south</span>
+            </div>
+
+            <div id="button-page-aboutme" class="button-next"  href="#home">
+                <h3>Back to Top</h3>
+                <span class="material-symbols-rounded">north</span>
+            </div>
+        </div> -->
+
+
+        <script src="../js/anime.min.js"></script>
+        <!-- <script src="../js/barba.js"></script> -->
+        <script src="../js/main.js"></script>
+        <script src="../js/lang-switcher.js"></script>
+        <script src="../js/fullpage.js"></script>
+    </body>
+</html>
