@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+            var lang = localStorage.getItem("lang");
+            console.log("lang: " + lang)
+            if (lang == "de") {
+                window.location.href = "de/index.html"
+            } else {
+                window.location.href = "en/index.html"
+            }
+            
+        </script>
+        <title>Page Redirection</title>
+    </head>
+    <body>
+        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
+        If you are not redirected automatically, follow this link: <a href='en/index.html'>portfolio english</a>.
+    </body>
+</html>

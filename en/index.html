@@ -38,17 +38,21 @@
     </head>
 
     <body onhashchange="setPageButton()">
-        <div class="loader"></div>
+
+        <div class="loader">
+            <img src="../assets/logo_white.svg">
+        </div>
         <header class="navbar">
-            <img id="navbar-icon" src="../assets/logo_white_256x.png" />
+            <!-- <img id="navbar-icon" src="../assets/logo_white.svg" /> -->
+            <div id="mask-logo"></div>
             <!-- <a href="index.html" id="navbar-url">cakeeh.art</a> -->
 
-            <div id="navbar-links">
+            <!-- <div id="navbar-links">
                 <a class="navbar-link" href="#home">Home</a>
                 <a class="navbar-link" href="#projects">Projects</a>
                 <a class="navbar-link" href="#about">About Me</a>
                 <a class="navbar-link" href="index.html">Gallery</a>
-            </div>
+            </div> -->
 
             <div id="lang-wrap">
                 <a href="#" lang="en" id="lang-en" class="lang-active">EN</a>
@@ -63,55 +67,48 @@
                 <!-- ----------------------- page landing --------------------------- -->
                 <section class="section" id="page-home" onchange="buttonProjects()">
                     <!-- <div style="height: 80px"></div> -->
+                    <div class="spacer"></div>
 
-                    <div id="att-block-container">
-                        <div id="att-block-main">
-                            <div id="att-block-main-left-side">
-                                <h1 class="text-gr-green" id="txt-h1-idea">
-                                    It all starts with an idea.
-                                </h1>
-                                <button
-                                    type="button"
-                                    class="button-gr-green"
-                                    id="txt-about-me"
-                                    onclick="window.location.href='#about'">
-                                    About Me
-                                </button>
-                            </div>
-                            <img src="../assets/logo_white_sketchup.png" />
+                    <div id="att-block-main" class="page-element-width">
+                        <div id="att-block-main-left-side">
+                            <h1 class="text-gr-green" id="txt-h1-idea">
+                                It all starts with an idea.
+                            </h1>
+                            <button
+                                type="button"
+                                class="button-gr-green"
+                                id="txt-about-me"
+                                onclick="window.location.href='#about'">
+                                About Me
+                            </button>
                         </div>
+                        <img src="../assets/logo_white_sketchup.png" />
                     </div>
 
                     <!-- skill cards -->
                     <div id="block-skills-container">
                         <div id="card1">
                             <h2 id="card1-title">Design</h2>
-                            <img
-                                id="card1-icon"
-                                src="../assets/icons/measure.svg"
-                            />
+                            <span class="material-symbols-rounded card-icon">architecture</span>
                         </div>
 
                         <div id="card2">
                             <h2 id="card2-title">3D</h2>
-                            <img
-                                id="card2-icon"
-                                src="../assets/icons/cube.svg"
-                            />
+                            <span class="material-symbols-rounded card-icon">deployed_code</span>
                         </div>
 
                         <div id="card3">
                             <h2 id="card3-title">Pixel Art</h2>
-                            <img
-                                id="card3-icon"
-                                src="../assets/icons/pixels grid.svg"
-                            />
+                            <span class="material-symbols-rounded card-icon">grid_view</span>
                         </div>
                     </div>
                 </section>
 
                 <!-- ----------------------- page projects --------------------------- -->
                 <div class="section" id="page-projects">
+
+                    <div class="spacer"></div>
+
                     <h1 class="page-header">Projects</h1>
                     <div id="block-projects-container">
                         <div id="projects-1">
@@ -126,14 +123,17 @@
 
                         <div id="projects-3">
                             <img src="../assets/projects/pixel/thumb.jpg" />
-                            <h3 class="text-gr-green">Nature Pixelart</h3>
+                            <h3 class="text-gr-green">Pixel Wallpapers</h3>
                         </div>
                     </div>
                 </div>
 
                 <!-- ----------------------- page aboutme --------------------------- -->
                 <section class="section" id="page-aboutme">
-                    <div id="att-about-me">
+
+                    <div class="spacer"></div>
+                    
+                    <div id="att-about-me" class="page-element-width">
                         <h2 class="page-header header-aboutme text-gr-green">About Me</h2>
                         <p>
                             Hi. I'm a passionate 2D/3D artist and
@@ -143,10 +143,10 @@
                         </p>
                     </div>
 
-                    <h2 class="page-header header-aboutme">Skills</h2>
+                    <h2 class="page-header header-aboutme page-element-width">Skills</h2>
 
 
-                    <div id="skills-container">
+                    <div id="skills-container" class="page-element-width">
 
                         <!-- left list -->
                         <ul class="skills-list">
@@ -265,7 +265,7 @@
                         </ul>
                     </div>
 
-                    <div id="att-email">
+                    <div id="att-email" class="page-element-width">
                         <h2 class="page-header header-aboutme text-gr-green">Want to get in touch?</h2>
                         
                         <div class="arrow-and-email-container">

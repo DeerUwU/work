@@ -42,19 +42,33 @@ $(document).ready(function() {
     //methods
     $.fn.fullpage.setAllowScrolling(true);
 
-    setPageButton()
-
-    
+    setPageButton() 
 });
+
+$(document).ready(function () {
+    var isMobile = navigator.userAgent.toLowerCase().match(/mobile/i);
+    console.log(`ismobile = ${isMobile}`)
+    
+    if ((isMobile) || document.documentElement.clientWidth < 700) {
+        $('#page-next-container').hide()
+    }
+
+});
+  
 // ---------------------------------------------------------------------
 
-$(".button-next").on("click", function (e) {
-    e.preventDefault();
-    const href = $(this).attr("href");
-    anime({
-        targets: 'html body',
-    })
-    $("html, body").animate({ scrollTop: $(href).offset() }, 0);
+$(".button-next").on("click", function () {
+    var active = fullpage_api.getActiveSection();
+
+    if (active.anchor == 'home'){
+        fullpage_api.moveTo('projects');
+        
+    } else if (active.anchor == 'projects') {
+        fullpage_api.moveTo('about');
+        
+    } else if (active.anchor == 'about') {
+        fullpage_api.moveTo('home');
+    }
 });
 // ---------------------------------------------------------------------
 // unused
@@ -124,14 +138,4 @@ function setPageButton() {
         });
         
     }
-}
-
-function buttonProjects() {
-    console.log("active: #home")
-}
-function buttonAboutMe() {
-    console.log("active: #projects")
-}
-function buttonHome() {
-    console.log("active: #aboutme")
 }
