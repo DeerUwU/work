@@ -8,12 +8,12 @@
         <link
             rel="icon"
             type="image/x-icon"
-            href="../assets/deer_sillhouette_256x.png"
+            href="../assets/logo_white_256x.png"
         />
 
         <meta
             property="og:image"
-            content="../assets/deer_sillhouette_256x.png"
+            content="../assets/logo_white_256x.png"
         />
         <meta property="og:image:alt" content="deer logo" />
         <meta property="og:image:width" content="256" />
@@ -37,7 +37,7 @@
         <script src="../js/jquery-3.6.1.min.js"></script>
     </head>
 
-    <body>
+    <body onhashchange="setPageButton()">
         <div class="loader"></div>
         <header class="navbar">
             <img id="navbar-icon" src="../assets/logo_white_256x.png" />
@@ -61,7 +61,7 @@
             <!-- fullpage.js container -->
             <div id="fullpage">
                 <!-- ----------------------- page landing --------------------------- -->
-                <section class="section" id="page-home">
+                <section class="section" id="page-home" onchange="buttonProjects()">
                     <!-- <div style="height: 80px"></div> -->
 
                     <div id="att-block-container">
@@ -279,23 +279,23 @@
             </div>
             
         </main>
-        <!-- 
+        
         <div id="page-next-container">
             <div id="button-page-projects" class="button-next" href="#projects">
-                <h3>Projects</h3>
+                <p>Projects</p>
                 <span class="material-symbols-rounded">south</span>
             </div>
 
             <div id="button-page-aboutme" class="button-next"  href="#aboutme">
-                <h3>About Me</h3>
+                <p>About Me</p>
                 <span class="material-symbols-rounded">south</span>
             </div>
 
-            <div id="button-page-aboutme" class="button-next"  href="#home">
-                <h3>Back to Top</h3>
+            <div id="button-page-home" class="button-next"  href="#home">
+                <p>Back to Top</p>
                 <span class="material-symbols-rounded">north</span>
             </div>
-        </div> -->
+        </div>
 
 
         <script src="../js/anime.min.js"></script>

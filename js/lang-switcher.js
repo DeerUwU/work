@@ -11,7 +11,6 @@ function getCookieValue(name) {
 
 
 if (getCookieValue("lang") == 'en') {
-    console.log($('html').attr('lang'))
 }
 
 

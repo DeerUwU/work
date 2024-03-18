@@ -5,6 +5,7 @@ const sleep = (milliseconds) => {
 
 // on page load:
 $(document).ready(function () {
+
     anime.timeline().add({
         targets: '.loader',
         translateY: -1000,
@@ -21,6 +22,7 @@ $(document).ready(function () {
         }
     });
 
+
 });
 
 // fullpage.js initialization
@@ -33,17 +35,18 @@ $(document).ready(function() {
         anchors: ['home', 'projects', 'about'],
         navigation: true,
         navigationPosition: 'right',
+        menu: true,
         // navigationTooltips: ['home', 'projects', 'about me'],
         showActiveTooltip: false
     });
-
     //methods
     $.fn.fullpage.setAllowScrolling(true);
+
+    setPageButton()
+
+    
 });
 // ---------------------------------------------------------------------
-
-var windowheight = $(window).height();
-console.log(windowheight);
 
 $(".button-next").on("click", function (e) {
     e.preventDefault();
@@ -51,9 +54,10 @@ $(".button-next").on("click", function (e) {
     anime({
         targets: 'html body',
     })
-    $("html, body").animate({ scrollTop: $(href).offset().top }, 0);
+    $("html, body").animate({ scrollTop: $(href).offset() }, 0);
 });
 // ---------------------------------------------------------------------
+// unused
 function getScrollPercent() {
     var h = document.documentElement, 
         b = document.body,
@@ -62,56 +66,72 @@ function getScrollPercent() {
     return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100
 }
 
-//scrolling functionality
-// let lastScrollTop = window.scrollY || document.documentElement.scrollTop;
+function setPageButton() {
+    var active = fullpage_api.getActiveSection();
+    console.log(active.anchor)
+    if (active.anchor == 'home'){
+        anime({ //move "projects" on screen
+            targets: '#button-page-projects',
+            translateY: 0,
+            easing: 'spring(1, 80, 10, 0)',
+            duration: 1000
+        });
+        anime({ //move "about me" offscreen
+            targets: '#button-page-aboutme',
+            translateY: 100,
+            duration: 1000
+        });
+        anime({ //move "home" offscreen
+            targets: '#button-page-home',
+            translateY: 100,
+            duration: 1000
+        });
+        
+    } else if (active.anchor == 'projects') {
+        anime({ //move "projects" offscreen
+            targets: '#button-page-projects',
+            translateY: 100,
+            duration: 1000
+        });
+        anime({ //move "about me" on screen
+            targets: '#button-page-aboutme',
+            translateY: 0,
+            easing: 'spring(1, 80, 10, 0)',
+            duration: 1000
+        });
+        anime({ //move "home" offscreen
+            targets: '#button-page-home',
+            translateY: 100,
+            duration: 1000
+        });
+        
+    } else if (active.anchor == 'about') {
+        anime({ //move "projects" offscreen
+            targets: '#button-page-projects',
+            translateY: 100,
+            duration: 1000
+        });
+        anime({ //move "about me" offscreen
+            targets: '#button-page-aboutme',
+            translateY: 100,
+            duration: 1000
+        });
+        anime({ //move "home" on screen
+            targets: '#button-page-home',
+            translateY: 0,
+            easing: 'spring(1, 80, 10, 0)',
+            duration: 1000
+        });
+        
+    }
+}
 
-// window.addEventListener('scroll', function handleScroll() {
-//     const scrollTopPosition =
-//       window.scrollY || document.documentElement.scrollTop;
-
-//     // check scrolling direction
-//         //if scrolling down:
-//     if (scrollTopPosition > lastScrollTop) {
-//       console.log('scrolling down');
-
-//     anime.timeline().add({
-//         targets: 'html',
-//         duration: 0,
-//         complete: function () {
-//             $('html').css('overflow', 'hidden');
-//         }
-//      }).add({
-//         targets: 'main',
-//         duration: 2000,
-//         translateY: "100vh",
-//         easing: "easeInOutCubic",
-//         complete: function () {
-//             $('html').css('overflow', 'initial');
-//         }
-//     });
-
-//         //if scrolling up:
-//     } else if (scrollTopPosition < lastScrollTop) {
-//       console.log('scrolling up');
-
-//       anime.timeline().add({
-//         targets: 'html',
-//         duration: 0,
-//         complete: function () {
-//             $('html').css('overflow', 'hidden');
-//         }
-//      }).add({
-//         targets: 'main',
-//         duration: 2000,
-//         translateY: '100vh',
-//         easing: "easeInOutCubic",
-//         complete: function () {
-//             $('html').css('overflow', 'initial');
-//         }
-//     });
-//     }
-//     lastScrollTop =
-//       scrollTopPosition <= 0 ? 0 : scrollTopPosition;
-//   },
-//   false,
-// );
+function buttonProjects() {
+    console.log("active: #home")
+}
+function buttonAboutMe() {
+    console.log("active: #projects")
+}
+function buttonHome() {
+    console.log("active: #aboutme")
+}
