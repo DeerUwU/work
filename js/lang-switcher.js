@@ -11,7 +11,7 @@ $('#lang-en').click(function () {
     $('#lang-en').addClass('lang-active');
 
     localStorage.setItem("lang", "en");
-
+    window.location.href = "../en/"
 });
 
 $('#lang-de').click(function () {
@@ -19,5 +19,5 @@ $('#lang-de').click(function () {
     $('#lang-de').addClass('lang-active');
     
     localStorage.setItem("lang", "de");
-    window.location.href = "de/index.html"
+    window.location.href = "../de/"
 });

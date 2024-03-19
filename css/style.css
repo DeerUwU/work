@@ -90,6 +90,11 @@ p {
     font-weight: 500;
 }
 
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
 button {
     padding: 10px 40px 10px 40px;
     border-radius: 500px;
@@ -103,10 +108,17 @@ button {
 
 .text-gr-green {
     background: var(--deer-green-gr);
+    background-color: var(--deer-blue);
+    background-repeat: no-repeat;
+
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
     width: fit-content;
+    transition: background-position-x 1s;
+}
+.text-gr-green:hover {
+    background-position-x: -200px;
 }
 
 @keyframes rainbow {
@@ -174,7 +186,7 @@ button {
     background-color: black;
     border-radius: var(--deer-br-big);
     padding: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     
 }
 #att-about-me > p {
@@ -454,7 +466,7 @@ button {
 
 #block-skills-container, #block-projects-container {
     display: flex;
-    margin-top: 20px;
+    margin: 20px 0px;
     justify-content: center;
     gap: 20px;
 }
@@ -567,21 +579,22 @@ button {
 
 @media only screen and (max-width: 800px) {
 
-    #mask-logo {
-        width: 60px;
-        height: 60px;
-        background-size: cover;
-        margin-left: 10px; 
-        background-image: url('../assets/logo_white_256x.png');
-        filter:invert(1);
+
+    h1 {
+        font-size: 56px;
+        line-height: 55px;
     }
+
     .loader > img {
         width: 50vw;
         height: 50vw;
     }
 
+    
+
     .page-element-width {
-        width: 90vw;
+        width: 100%;
+        margin-inline: 0px;
     }    
 
     .spacer {
@@ -594,17 +607,23 @@ button {
     #att-block-main, #att-about-me, #att-email {
         max-width: -webkit-fill-available;
         border-radius: 0px;
+        padding: 20px;
     }
     #att-block-main {
         flex-direction: column-reverse;
     }
     #txt-h1-idea {
         margin-bottom: 15px;
+        background-position-x: -200px;
     }
 
     #att-block-main > img {
         width: 150px;
         height: 150px;
+    }
+
+    #page-projects {
+        margin: 60px 0px;
     }
 
     #block-skills-container, #block-projects-container {
@@ -641,10 +660,10 @@ button {
         ;
     }
     #projects-2 {
-        background-image: url('../assets/projects/3d/thumb.jpg');
+        background-image: url('../assets/projects/3d/summer silence_still.jpg');
     }
     #projects-3 {
-        background-image: url('../assets/projects/pixel/thumb.jpg');
+        background-image: url('../assets/projects/pixel/pondy_1440p.png');
     }
 
     #card1, #card2, #card3 {
@@ -655,10 +674,19 @@ button {
     .card-icon {
         font-size: 80px!important;
     }
-
+    #skills-container {
+        width: 90vw;
+        margin-inline: auto;
+    }
     #att-email {
         margin: 0px;
         padding-bottom: 80px;
     }
+
+    .aboutme-email {
+        font-size: 32px;
+    }
+
+    
 }
 

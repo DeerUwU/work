@@ -1,21 +1,48 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
     <head>
+
+        <title>Portfolio Redirect</title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="../assets/logo_white_256x.png"
+        />
+
+        <meta
+            property="og:image"
+            content="work.cakeeh.art/assets/logo_white_256x.png"
+        />
+        <meta property="og:image:alt" content="deer logo" />
+        <meta property="og:image:width" content="256" />
+        <meta property="og:image:height" content="256" />
+        <meta property="og:title" content="Design Portfolio" />
+        <meta
+            property="og:description"
+            content="Hi, thanks for checking out my stuff."
+        />
+        <meta property="og:url" content="index.html" />
+        <meta property="og:type" content="website" />
+
+
         <meta charset="UTF-8">
         <script type="text/javascript">
             var lang = localStorage.getItem("lang");
+            //if lang is unset, default to english
+            if (lang == null) {
+                localStorage.setItem("lang", "en")
+            };
             console.log("lang: " + lang)
             if (lang == "de") {
-                window.location.href = "de/index.html"
+                window.location.href = "de/"
             } else {
-                window.location.href = "en/index.html"
+                window.location.href = "en/"
             }
             
         </script>
-        <title>Page Redirection</title>
     </head>
     <body>
         <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
-        If you are not redirected automatically, follow this link: <a href='en/index.html'>portfolio english</a>.
+        If you are not redirected automatically, follow this link: <a href='en/'>portfolio english</a>.
     </body>
 </html>
