@@ -177,7 +177,12 @@ button {
 /* --------------------------------------------------------------------------- */
 /* individual pages: */
 
-
+section#page-home {
+    background: url('../assets/projects/pixel/deer cherry blossom 1440p.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
 .header-aboutme {
     text-align: left!important;
 }
@@ -376,8 +381,8 @@ button {
     position:absolute;
     transform: translateY(100px);
 
-    /* background-color: #ffffff; */
-    backdrop-filter: grayscale(1) blur(5px);
+    background-color: #ffffff;
+    /* backdrop-filter: grayscale(1) blur(5px); */
     border-radius: 50px;
     padding: 10px 25px;
 }
@@ -726,7 +731,7 @@ button {
 
     #card1, #card2, #card3 {
         flex-direction: row-reverse;
-        justify-content: center;
+        justify-content: left;
         width: 70vw;
     }
     .card-icon {
