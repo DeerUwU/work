@@ -47,12 +47,6 @@
             <div id="mask-logo"></div>
             <!-- <a href="index.html" id="navbar-url">cakeeh.art</a> -->
 
-            <!-- <div id="navbar-links">
-                <a class="navbar-link" href="#home">Home</a>
-                <a class="navbar-link" href="#projects">Projects</a>
-                <a class="navbar-link" href="#about">About Me</a>
-                <a class="navbar-link" href="index.html">Gallery</a>
-            </div> -->
 
             <div id="lang-wrap">
                 <a href="#" lang="en" id="lang-en" class="lang-active">EN</a>
@@ -72,13 +66,13 @@
                     <div id="att-block-main" class="page-element-width">
                         <div id="att-block-main-left-side">
                             <h1 class="text-gr-green" id="txt-h1-idea">
-                                It all starts with an idea.
+                                Every Design starts with an idea.
                             </h1>
                             <button
                                 type="button"
                                 class="button-gr-green"
                                 id="txt-about-me"
-                                onclick="window.location.href='#about'">
+                                onclick="fullpage_api.moveTo('about')">
                                 About Me
                             </button>
                         </div>
@@ -102,6 +96,27 @@
                             <span class="material-symbols-rounded card-icon">grid_view</span>
                         </div>
                     </div>
+
+                    <!-- <div id="skills-cycle-container">
+                        <h2>I create </h2>
+
+                        <div id="skills-cycle-words-container">
+                            <span id="skills-text1"></span>
+                            <span id="skills-text2"></span>
+                        </div>
+
+                        <svg id="filters">
+                            <defs>
+                                <filter id="threshold">
+                                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                                                            0 1 0 0 0
+                                                            0 0 1 0 0
+                                                            0 0 0 255 -140" />
+                                </filter>
+                            </defs>
+                        </svg>
+                    </div> -->
+
                 </section>
 
                 <!-- ----------------------- page projects --------------------------- -->
@@ -116,7 +131,7 @@
                             <h3 class="text-gr-green">Designs</h3>
                         </div>
 
-                        <div id="projects-2">
+                        <div id="projects-2" onclick='window.location.href = "3d.html"'>
                             <img src="../assets/projects/3d/summer silence_still.jpg"/>
                             <h3 class="text-gr-green">3D Projects</h3>
                         </div>
@@ -136,10 +151,12 @@
                     <div id="att-about-me" class="page-element-width">
                         <h2 class="page-header header-aboutme text-gr-green">About Me</h2>
                         <p>
-                            Hi. I'm a passionate 2D/3D artist and
-                            aspiring graphic designer from Germany. I'm well-versed
-                            in a variety of creative applications. Thank you for
-                            checking out my work!
+                            Hi I'm Emily. I'm a  2D/3D artist and
+                            aspiring graphic designer from Germany. My passion for art began at a
+                            young age and I've always strived to learn and improve my works since then.
+                            <br><br>
+                            Thanks to my years of experience I'm well-versed
+                            in a variety of creative applications and a range of creative fields. 
                         </p>
                     </div>
 
@@ -268,9 +285,19 @@
                     <div id="att-email" class="page-element-width">
                         <h2 class="page-header header-aboutme text-gr-green">Want to get in touch?</h2>
                         
-                        <div class="arrow-and-email-container">
+                        <div class="arrow-and-email-container email-tooltip">
+                            
+                            <!-- <button
+                                type="button"
+                                class="button-gr-green button-email email-tooltip"
+                                onclick="emailButton()">
+                                <span class="material-symbols-rounded" id="arrow-email">east</span>
+                                <span class="email-tooltiptext">click to copy</span>
+                                contact@cakeeh.art
+                            </button> -->
                             <span class="material-symbols-rounded" id="arrow-email">east</span>
-                            <a class="aboutme-email" href="mailto:contact@cakeeh.art">contact@cakeeh.art</a>
+                            <span class="email-tooltiptext">click to copy</span>
+                            <a class="aboutme-email" onclick="emailButton()">contact@cakeeh.art</a>
                         </div>
                         
                     </div>

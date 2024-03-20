@@ -214,9 +214,75 @@ button {
     color: var(--deer-blue);
     font-size: 50px;
 }
+.button-email {
+    color: var(--deer-black)!important;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.email-tooltip {
+    position: relative;
+    cursor: pointer;
+    /* display: inline-block; */
+}
+.email-tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    width: fit-content;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 20px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -25px;
+    right: 0%;
+}
+
+.email-tooltip:hover .email-tooltiptext {
+    visibility: visible;
+  }
+
+
+
+
 
 /* ------------------------------------------------------------ */
 /* skills list */
+
+
+#skills-cycle-container {
+    /* display: flex; */
+}
+
+#skills-cycle-words-container {
+
+    display:flex;
+    align-items: center;
+    margin: auto;
+    width: 100vw;
+    /* height: 80pt; */
+    top: 0;
+    bottom: 0;
+
+    filter: url(#threshold) blur(0.6px);
+}
+
+#skills-text1,
+#skills-text2 {
+    position: absolute;
+    width: 100%;
+    /* font-size: 150pt; */
+    font-size: 48px;
+    font-weight: bold;
+    text-align: left;
+
+    user-select: none;
+    color: var(--deer-black);
+}
+
 #skills-container {
     background-color: var(--deer-white);
     display: flex;
@@ -480,25 +546,17 @@ button {
 #card3 {
     width: 280px;
     background: var(--deer-white);
-    border: solid 8px var(--deer-red-1);
+    /* border: solid 8px var(--deer-red-1); */
     border-radius: var(--deer-br-big);
 
     align-items: center;
     display: flex;
     flex-direction: column;
 }
-
-#card1 {
-    border-color: var(--deer-red-1);
-}
-
-#card2 {
-    border-color: var(--deer-red-2);
-}
-
-#card3 {
-    border-color: var(--deer-red-3);
-}
+/* 
+#card1 { border-color: var(--deer-red-1); }
+#card2 { border-color: var(--deer-red-2); }
+#card3 { border-color: var(--deer-red-3); } */
 
 [id|="card1"] {
     color: var(--deer-red-1);
@@ -686,6 +744,8 @@ button {
     .aboutme-email {
         font-size: 32px;
     }
+
+    
 
     
 }
