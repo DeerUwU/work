@@ -258,22 +258,22 @@ section#page-home {
 /* skills list */
 
 
-#skills-cycle-container {
-    /* display: flex; */
-}
+/* #skills-cycle-container {
+    display: flex;
+} */
 
-#skills-cycle-words-container {
+/* #skills-cycle-words-container {
 
     display:flex;
     align-items: center;
     margin: auto;
     width: 100vw;
-    /* height: 80pt; */
+    height: 80pt;
     top: 0;
     bottom: 0;
 
     filter: url(#threshold) blur(0.6px);
-}
+} */
 
 #skills-text1,
 #skills-text2 {
@@ -665,6 +665,9 @@ section#page-home {
     }
 
     /* remove gaps above divs when certain size */
+    section#page-home {
+        background: none;
+    }
     
 
     #att-block-main, #att-about-me, #att-email {
