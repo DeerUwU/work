@@ -1,0 +1,38 @@
+
+.arrow-back {
+    font-size: 40px!important;
+    font-weight: bold!important;
+    color: black;
+    transition: color 0.3s;
+}
+.arrow-back:hover {
+    color: var(--deer-silver);
+}
+
+#att-about-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.projects-img-container {
+    width:80vw;
+    margin: auto;
+    margin-top: 40px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projects-img-container > img, .projects-img-container > video {
+    max-width: -webkit-fill-available;
+    border-radius: 20px;
+    max-height: 90vh;
+}
