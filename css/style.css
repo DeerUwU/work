@@ -183,12 +183,12 @@ button {
 /* --------------------------------------------------------------------------- */
 /* individual pages: */
 
-section#page-home {
+/* section#page-home {
     background: url('../assets/projects/pixel/deer cherry blossom 1440p.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
-}
+} */
 .header-aboutme {
     text-align: left!important;
 }
