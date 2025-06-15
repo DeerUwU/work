@@ -32,7 +32,7 @@ $(document).ready(function() {
         licenseKey: 'gplv3-license',
         autoScrolling:true,
         scrollHorizontally: true,
-        anchors: ['home', 'projects', 'about'],
+        anchors: ['home', 'about'],
         navigation: true,
         navigationPosition: 'right',
         menu: true,
@@ -85,14 +85,9 @@ function setPageButton() {
     console.log(active.anchor)
     if (active.anchor == 'home'){
         anime({ //move "projects" on screen
-            targets: '#button-page-projects',
+            targets: '#button-page-aboutme',
             translateY: 0,
             easing: 'spring(1, 80, 10, 0)',
-            duration: 1000
-        });
-        anime({ //move "about me" offscreen
-            targets: '#button-page-aboutme',
-            translateY: 100,
             duration: 1000
         });
         anime({ //move "home" offscreen
@@ -101,30 +96,8 @@ function setPageButton() {
             duration: 1000
         });
         
-    } else if (active.anchor == 'projects') {
-        anime({ //move "projects" offscreen
-            targets: '#button-page-projects',
-            translateY: 100,
-            duration: 1000
-        });
-        anime({ //move "about me" on screen
-            targets: '#button-page-aboutme',
-            translateY: 0,
-            easing: 'spring(1, 80, 10, 0)',
-            duration: 1000
-        });
-        anime({ //move "home" offscreen
-            targets: '#button-page-home',
-            translateY: 100,
-            duration: 1000
-        });
         
     } else if (active.anchor == 'about') {
-        anime({ //move "projects" offscreen
-            targets: '#button-page-projects',
-            translateY: 100,
-            duration: 1000
-        });
         anime({ //move "about me" offscreen
             targets: '#button-page-aboutme',
             translateY: 100,
@@ -132,7 +105,7 @@ function setPageButton() {
         });
         anime({ //move "home" on screen
             targets: '#button-page-home',
-            translateY: 0,
+            translateY: 100,
             easing: 'spring(1, 80, 10, 0)',
             duration: 1000
         });

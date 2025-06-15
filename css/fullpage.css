@@ -152,7 +152,7 @@ html.fp-enabled,
     height: 12px;
     width: 12px;
     margin: -6px 0 0 -6px;
-    border-radius: 100%;
+    border-radius: 0%;
  }
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {

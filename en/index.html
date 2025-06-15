@@ -63,229 +63,211 @@
             <!-- fullpage.js container -->
             <div id="fullpage">
                 <!-- ----------------------- page landing --------------------------- -->
-                <section class="section" id="page-home"">
-                    <!-- <div style="height: 80px"></div> -->
-                    <div class="spacer"></div>
+                <section class="section" id="page-home">
+                    <div class="MarginContainer">
+                        <div class="CenterContainer">
+                            <div class="spacer"></div>
 
-                    <div id="att-block-main" class="page-element-width">
-                        <div id="att-block-main-left-side">
-                            <h1 class="text-gr-green" id="txt-h1-idea">
-                                Every Design starts with an idea.
-                            </h1>
-                            <button
-                                type="button"
-                                class="button-gr-green"
-                                id="txt-about-me"
-                                onclick="fullpage_api.moveTo('about')">
-                                About Me
-                            </button>
+                            <div id="att-block-main">
+                                <div id="att-block-main-left-side">
+                                    <h1 class="text-gr-green" id="txt-h1-idea">
+                                        Hi, welcome to my portfolio!
+                                    </h1>
+                                    <button
+                                        type="button"
+                                        class="button-gr-green"
+                                        id="txt-about-me"
+                                        onclick="fullpage_api.moveTo('about')">
+                                        About Me
+                                    </button>
+                                </div>
+                                <img src="../assets/logo_white_sketchup.png" />
+                            </div>
+
+
+                            <div id="block-projects-container">
+                                <div class="ProjectCard" id="projects-1" onclick='window.location.href = "designs.html"'>
+                                    <h3 class="text-gr-green ProjectCardTitle">Designs</h3>
+                                </div>
+
+                                <div class="ProjectCard" id="projects-2" onclick='window.location.href = "3d.html"'>
+                                    <h3 class="text-gr-green ProjectCardTitle">3D Projects</h3>
+                                </div>
+
+                                <div class="ProjectCard" id="projects-3" onclick='window.location.href = "pixel.html"'>
+                                    <h3 class="text-gr-green ProjectCardTitle">Illustrations</h3>
+                                </div>
+
+                                <div class="ProjectCard" id="projects-4"'>
+                                    <h3 class="text-gr-green ProjectCardTitle">Coming Soon</h3>
+                                </div>
+                            </div>
                         </div>
-                        <img src="../assets/logo_white_sketchup.png" />
+                        
                     </div>
-
-                    <!-- skill cards -->
-                    <div id="block-skills-container">
-                        <div id="card1">
-                            <h2 id="card1-title">Design</h2>
-                            <span class="material-symbols-rounded card-icon">architecture</span>
-                        </div>
-
-                        <div id="card2">
-                            <h2 id="card2-title">3D</h2>
-                            <span class="material-symbols-rounded card-icon">deployed_code</span>
-                        </div>
-
-                        <div id="card3">
-                            <h2 id="card3-title">Pixel Art</h2>
-                            <span class="material-symbols-rounded card-icon">grid_view</span>
-                        </div>
-                    </div>
-
-                </section>
-
-                <!-- ----------------------- page projects --------------------------- -->
-                <div class="section" id="page-projects">
-
-                    <div class="spacer"></div>
-
-                    <h1 class="page-header">Projects</h1>
-                    <div id="block-projects-container">
-                        <div id="projects-1" onclick='window.location.href = "designs.html"'>
-                            <img src="../assets/projects/design/thumb.png" />
-                            <h3 class="text-gr-green">Designs</h3>
-                        </div>
-
-                        <div id="projects-2" onclick='window.location.href = "3d.html"'>
-                            <img src="../assets/projects/3d/summer silence_still.jpg"/>
-                            <h3 class="text-gr-green">3D Projects</h3>
-                        </div>
-
-                        <div id="projects-3" onclick='window.location.href = "pixel.html"'>
-                            <img src="../assets/projects/pixel/pondy_1440p.png" />
-                            <h3 class="text-gr-green">Pixel Wallpapers</h3>
-                        </div>
-                    </div>
-                </div>
+                </section> <!-- end home -->
 
                 <!-- ----------------------- page aboutme --------------------------- -->
                 <section class="section" id="page-aboutme">
-
-                    <div class="spacer"></div>
-                    
-                    <div id="att-about-me" class="page-element-width">
-                        <h2 class="page-header header-aboutme text-gr-green">About Me</h2>
-                        <p>
-                            Hi I'm Emily. I'm a  2D/3D artist and
-                            aspiring graphic designer from Germany. My passion for art began at a
-                            young age and I've always strived to learn and improve my works since then.
-                            <br><br>
-                            Thanks to my years of experience I'm well-versed
-                            in a variety of creative applications and a range of creative fields. 
-                        </p>
-                    </div>
-
-                    <h2 class="page-header page-element-width">Skills</h2>
-
-
-                    <div id="skills-container" class="page-element-width">
-
-                        <!-- left list -->
-                        <ul class="skills-list">
-
-                            <!-- photoshop -->
-                            <li class="skills-list-item">
-                                <img src="../assets/icons/Adobe Photoshop CC.svg">
-
-                                <div class="skills-textandbar">
-                                    <div class="skills-item-name">
-                                        <p>Photoshop</p>
-                                        <p>(5 years)</p>     
-                                    </div>
-                                    <div class="skills-bar p80"></div>
-                                </div>
-                            </li>
-
-                            <!-- illustrator -->
-                            <li class="skills-list-item">
-                                <img src="../assets/icons/Adobe Illustrator CC.svg">
-
-                                <div class="skills-textandbar">
-                                    <div class="skills-item-name">
-                                        <p>Illustrator</p>
-                                        <p>(3 years)</p>     
-                                    </div>
-                                    <div class="skills-bar p70"></div>
-                                </div>
-                            </li>
-
-                            <!-- premiere -->
-                            <li class="skills-list-item">
-                                <img src="../assets/icons/Adobe Premiere 2020.svg">
-
-                                <div class="skills-textandbar">
-                                    <div class="skills-item-name">
-                                        <p>Premiere</p>
-                                        <p>(3 years)</p>     
-                                    </div>
-                                    <div class="skills-bar p70"></div>
-                                </div>
-                            </li>
-
-                            <!-- indesign -->
-                            <li class="skills-list-item">
-                                <img src="../assets/icons/Adobe Indesign CC.svg">
-
-                                <div class="skills-textandbar">
-                                    <div class="skills-item-name">
-                                        <p>Indesign</p>
-                                        <p>(2 years)</p>     
-                                    </div>
-                                    <div class="skills-bar p50"></div>
-                                </div>
-                            </li>
-
-
-                        </ul>
-
-
-                        <!-- right list -->
-                        <ul class="skills-list">
-
-                            <!-- photoshop -->
-                            <li class="skills-list-item">
-                                <img src="../assets/icons/blender.svg">
-
-                                <div class="skills-textandbar">
-                                    <div class="skills-item-name">
-                                        <p>Blender</p>
-                                        <p>(6 years)</p>     
-                                    </div>
-                                    <div class="skills-bar p90"></div>
-                                </div>
-                            </li>
-
-                            <!-- illustrator -->
-                            <li class="skills-list-item">
-                                <img src="../assets/icons/html.svg">
-
-                                <div class="skills-textandbar">
-                                    <div class="skills-item-name">
-                                        <p>HTML/CSS</p>
-                                        <p>(2 years)</p>     
-                                    </div>
-                                    <div class="skills-bar p70"></div>
-                                </div>
-                            </li>
-
-                            <!-- premiere -->
-                            <li class="skills-list-item">
-                                <img src="../assets/icons/figma.png">
-
-                                <div class="skills-textandbar">
-                                    <div class="skills-item-name">
-                                        <p>Figma</p>
-                                        <p>(1 year)</p>     
-                                    </div>
-                                    <div class="skills-bar p60"></div>
-                                </div>
-                            </li>
-
-                            <!-- indesign -->
-                            <li class="skills-list-item">
-                                <img src="../assets/icons/js.svg">
-
-                                <div class="skills-textandbar">
-                                    <div class="skills-item-name">
-                                        <p>Javascript</p>
-                                        <p>(6 months)</p>     
-                                    </div>
-                                    <div class="skills-bar p30"></div>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-
-                    <div id="att-email" class="page-element-width">
-                        <h2 class="page-header header-aboutme text-gr-green">Want to get in touch?</h2>
+                    <div class="MarginContainer">
+                        <div class="CenterContainer">
+                            <!-- <div class="spacer"></div> -->
                         
-                        <div class="arrow-and-email-container email-tooltip">
-                            
-                            <!-- <button
-                                type="button"
-                                class="button-gr-green button-email email-tooltip"
-                                onclick="emailButton()">
-                                <span class="material-symbols-rounded" id="arrow-email">east</span>
-                                <span class="email-tooltiptext">click to copy</span>
-                                contact@cakeeh.art
-                            </button> -->
-                            <span class="material-symbols-rounded" id="arrow-email">east</span>
-                            <span class="email-tooltiptext">click to copy</span>
-                            <a class="aboutme-email" onclick="emailButton()">contact@cakeeh.art</a>
-                        </div>
+                            <div id="att-about-me">
+                                <h2 class="page-header header-aboutme text-gr-green">About Me</h2>
+                                <p>
+                                    Hi I'm Emily. I'm a  2D/3D artist and
+                                    aspiring graphic designer from Germany. My passion for art began at a
+                                    young age and I've always strived to learn and improve my works since then.
+                                    <br><br>
+                                    Thanks to my years of experience I'm well-versed
+                                    in a variety of creative applications and a range of creative fields. 
+                                </p>
+                            </div>
+
+                            <h2 class="page-header page-element-width">Skills</h2>
+
+
+                            <div id="skills-container" class="page-element-width">
+
+                                <!-- left list -->
+                                <ul class="skills-list">
+
+                                    <!-- photoshop -->
+                                    <li class="skills-list-item">
+                                        <img src="../assets/icons/Adobe Photoshop CC.svg">
+
+                                        <div class="skills-textandbar">
+                                            <div class="skills-item-name">
+                                                <p>Photoshop</p>
+                                                <p>(5 years)</p>     
+                                            </div>
+                                            <div class="skills-bar p80"></div>
+                                        </div>
+                                    </li>
+
+                                    <!-- illustrator -->
+                                    <li class="skills-list-item">
+                                        <img src="../assets/icons/Adobe Illustrator CC.svg">
+
+                                        <div class="skills-textandbar">
+                                            <div class="skills-item-name">
+                                                <p>Illustrator</p>
+                                                <p>(3 years)</p>     
+                                            </div>
+                                            <div class="skills-bar p70"></div>
+                                        </div>
+                                    </li>
+
+                                    <!-- premiere -->
+                                    <li class="skills-list-item">
+                                        <img src="../assets/icons/Adobe Premiere 2020.svg">
+
+                                        <div class="skills-textandbar">
+                                            <div class="skills-item-name">
+                                                <p>Premiere</p>
+                                                <p>(3 years)</p>     
+                                            </div>
+                                            <div class="skills-bar p70"></div>
+                                        </div>
+                                    </li>
+
+                                    <!-- indesign -->
+                                    <li class="skills-list-item">
+                                        <img src="../assets/icons/Adobe Indesign CC.svg">
+
+                                        <div class="skills-textandbar">
+                                            <div class="skills-item-name">
+                                                <p>Indesign</p>
+                                                <p>(2 years)</p>     
+                                            </div>
+                                            <div class="skills-bar p50"></div>
+                                        </div>
+                                    </li>
+
+
+                                </ul>
+
+                                <!-- right list -->
+                                <ul class="skills-list">
+
+                                    <!-- photoshop -->
+                                    <li class="skills-list-item">
+                                        <img src="../assets/icons/blender.svg">
+
+                                        <div class="skills-textandbar">
+                                            <div class="skills-item-name">
+                                                <p>Blender</p>
+                                                <p>(6 years)</p>     
+                                            </div>
+                                            <div class="skills-bar p90"></div>
+                                        </div>
+                                    </li>
+
+                                    <!-- illustrator -->
+                                    <li class="skills-list-item">
+                                        <img src="../assets/icons/html.svg">
+
+                                        <div class="skills-textandbar">
+                                            <div class="skills-item-name">
+                                                <p>HTML/CSS</p>
+                                                <p>(2 years)</p>     
+                                            </div>
+                                            <div class="skills-bar p70"></div>
+                                        </div>
+                                    </li>
+
+                                    <!-- premiere -->
+                                    <li class="skills-list-item">
+                                        <img src="../assets/icons/figma.png">
+
+                                        <div class="skills-textandbar">
+                                            <div class="skills-item-name">
+                                                <p>Figma</p>
+                                                <p>(1 year)</p>     
+                                            </div>
+                                            <div class="skills-bar p60"></div>
+                                        </div>
+                                    </li>
+
+                                    <!-- indesign -->
+                                    <li class="skills-list-item">
+                                        <img src="../assets/icons/js.svg">
+
+                                        <div class="skills-textandbar">
+                                            <div class="skills-item-name">
+                                                <p>Javascript</p>
+                                                <p>(6 months)</p>     
+                                            </div>
+                                            <div class="skills-bar p30"></div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div id="att-email">
+                                <h2 class="page-header header-aboutme text-gr-green">Want to get in touch?</h2>
+                                
+                                <div class="arrow-and-email-container email-tooltip">
+                                    
+                                    <!-- <button
+                                        type="button"
+                                        class="button-gr-green button-email email-tooltip"
+                                        onclick="emailButton()">
+                                        <span class="material-symbols-rounded" id="arrow-email">east</span>
+                                        <span class="email-tooltiptext">click to copy</span>
+                                        contact@cakeeh.art
+                                    </button> -->
+                                    <span class="material-symbols-rounded" id="arrow-email">east</span>
+                                    <span class="email-tooltiptext">click to copy</span>
+                                    <a class="aboutme-email" onclick="emailButton()">contact@cakeeh.art</a>
+                                </div>
+                                
+                            </div>
                         
-                    </div>
-                    <!-- --------------- -->
+                        </div> <!-- end CenterContainer -->
+                    </div> <!-- end MarginContainer -->
                 </section>
             </div>
             
@@ -297,10 +279,10 @@
                 <span class="material-symbols-rounded">south</span>
             </div>
 
-            <div id="button-page-aboutme" class="button-next"  href="#aboutme">
+            <Button id="button-page-aboutme" class="button-next"  onclick="fullpage_api.moveTo('about')">
                 <p>About Me</p>
                 <span class="material-symbols-rounded">south</span>
-            </div>
+            </Button>
 
             <div id="button-page-home" class="button-next"  href="#home">
                 <p>Back to Top</p>

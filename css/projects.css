@@ -33,6 +33,6 @@ h1 {
 
 .projects-img-container > img, .projects-img-container > video {
     max-width: -webkit-fill-available;
-    border-radius: 20px;
+    border-radius: 0px;
     max-height: 90vh;
 }
